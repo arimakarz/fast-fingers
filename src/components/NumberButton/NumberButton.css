@@ -1,0 +1,26 @@
+.button {
+    height: 80px;
+    background-color: gainsboro;
+    box-shadow: 0 0 8px #888;
+    border: none;
+    width: 5rem;
+    height: 5rem;
+    text-align: center;
+    font-size: 2em;
+    font-family: "Fredoka", sans-serif;
+    font-weight: bold;
+    line-height: 5rem;
+    margin: 0.5rem;
+}
+
+.button:hover{
+    box-shadow: 0 0 15px #888;
+}
+
+.invisible{
+    opacity: 0%;
+}
+
+.visible{
+    opacity: 100%;
+}
