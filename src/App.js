@@ -1,12 +1,15 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Board } from './components/Board/Board'
+import Countdown from 'react-countdown';
+import { Timer } from './components/Timer/Timer'
 import './App.css';
 
 function App() {
 
   const [ clickedNums, setClickedNums ] = useState([])
   const [ activeNum, setActiveNum ] = useState(clickedNums.length)
-  
+  const [ status, setStatus ] = useState(true)
+  //const [ timeCounter, setTimeCounter ] = useState(Date.now() + 30000)
 
   function shuffleArray(array) {
     for (var i = array.length - 1; i > 0; i--) {
@@ -34,12 +37,23 @@ function App() {
     setActiveNum(clickedNums.length)
   }
 
-  const checkFinished = () => {
-    if (clickedNums.length === 25) console.log("win")
+  const checkFinished = (timeCounter) => {
+    if (clickedNums.length === 25) {
+      console.log("win")
+      setStatus(false)
+    }
   }
+
+  // useEffect(() => {
+  //   console.log(leftTime)
+  //   setLeftTime(leftTime - 1)
+  //   if (leftTime === 0) console.log('youve run out of time')
+  // }, [timeCounter])
 
   return (
     <div className='App'>
+      {/* <Countdown className={ Date.now() > 10000 ? "timer" : "timer red" } date={timeCounter}/> */}
+      <Timer status = { status }/>
       <Board numbers={ numbers } activeNum={ clickedNums.length !== 0 ? activeNum: 0 } onClick={ handleClick }/>
     </div>
 

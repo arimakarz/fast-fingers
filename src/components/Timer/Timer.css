@@ -1,0 +1,14 @@
+.timer{
+    height: 80px;
+    border: none;
+    width: 10%;
+    height: 5rem;
+    text-align: center;
+    font-size: 2em;
+    font-family: "Fredoka", sans-serif;
+    font-weight: bold;
+    line-height: 5rem;
+    margin-left: 45%;
+    place-items: center;
+    justify-content: center;
+}
