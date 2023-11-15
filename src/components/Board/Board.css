@@ -1,6 +1,22 @@
 .board{
     display: grid;
-    grid-template-columns: repeat(5, 6rem);
     place-items: center;
     justify-content: center;
+    width: 100%;
+}
+
+.small {
+    grid-template-columns: repeat(5, 6rem);
+}
+
+.medium{
+    grid-template-columns: repeat(6, auto);
+}
+
+.advanced{
+    grid-template-columns: repeat(8, auto);
+}
+
+.expert{
+    grid-template-columns: repeat(10, auto);
 }

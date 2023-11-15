@@ -2,7 +2,7 @@ import React, { useState, useEffect }  from 'react'
 import './Timer.css'
 
 export const Timer = ({ status }) => {
-
+    
     const [ time, setTime ] = useState(0)
     const [ active, setActive ] = useState(status)
 
@@ -14,7 +14,7 @@ export const Timer = ({ status }) => {
                 setActive(false)
             }
         }, 10)
-    }, [time, status])
+    })
 
   return (
     <div className="timer">
